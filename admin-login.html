@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — Lightning Mclean</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="desktop.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <main class="admin-login-page">
+    <div class="admin-login-card">
+
+      <a href="index.html" class="admin-logo">
+        <span class="logo-script">Lightning</span>
+        <span class="logo-block">Mclean</span>
+        <span class="logo-sub">Cleaning Services</span>
+      </a>
+
+      <div class="admin-login-header">
+        <span class="admin-label">Admin Portal</span>
+        <h1>Welcome Back</h1>
+        <p>Login to manage quote requests and booking availability.</p>
+      </div>
+
+      <form id="adminLoginForm" class="admin-form">
+        <label>Email Address</label>
+        <input type="email" id="adminEmail" placeholder="Enter admin email" required />
+
+        <label>Password</label>
+        <input type="password" id="adminPassword" placeholder="Enter password" required />
+
+        <button type="submit" class="btn-primary admin-login-btn">
+          Login
+        </button>
+
+        <button type="button" class="admin-forgot-btn" onclick="forgotPassword()">
+          Forgot password?
+        </button>
+      </form>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

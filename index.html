@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lightning Mclean — Cleaning Services · Corner Brook, NL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      if (sessionStorage.getItem('forceDesktop')) return;
+      if (window.innerWidth <= 768 && !window.location.pathname.includes('mobile-')) {
+        window.location.replace('mobile-home.html');
+      }
+    })();
+  </script>
+  
+  <link rel="stylesheet" href="desktop.css" />
+
+  
+
+</head>
+<body>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-script">Lightning</span>
+        <span class="logo-block">Mclean</span>
+        <span class="logo-sub">Cleaning Services</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#gallery">Our Work</a></li>
+        <li><a href="#" class="nav-cta" onclick="openQuotePanel(event)">Get a Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-stripes" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 10 10" fill="currentColor"><polygon points="5,0 6.2,3.8 10,3.8 6.9,6.2 8.1,10 5,7.6 1.9,10 3.1,6.2 0,3.8 3.8,3.8"/></svg>
+        Corner Brook, NL — Est. 2025
+      </div>
+      <h1 class="hero-title">
+        Your Space,<br>
+        <em class="hero-accent">Spotless.</em>
+      </h1>
+      <p class="hero-sub">Professional residential &amp; commercial cleaning services. Windows, floors, real estate, and more — done right the first time.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary" onclick="openQuotePanel(event)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></svg>
+          Book Now
+        </a>
+        <a href="#services" class="btn-outline">See Our Services</a>
+      </div>
+      <div class="hero-chips">
+        <div class="hero-stat-chip chip-1">
+          <span class="chip-num">24hr</span>
+          <span class="chip-text">Quote Turnaround</span>
+        </div>
+        <div class="hero-stat-chip chip-2">
+          <span class="chip-num">100%</span>
+          <span class="chip-text">Satisfaction Promise</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-img-frame img-placeholder">
+        <span>IMAGE PLACEHOLDER<br><small>Hero Team Photo</small></span>
+      </div>
+      <div class="hero-sticker">
+        <span>Lightning<br>Fast!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Window Cleaning</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Residential Cleaning</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Commercial Cleaning</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Real Estate Cleaning</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Debris Removal</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Window Cleaning</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Residential Cleaning</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Commercial Cleaning</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Real Estate Cleaning</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+      <span>Debris Removal</span><span class="ticker-dot" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M6 1.5 7.2 4.8 10.5 6 7.2 7.2 6 10.5 4.8 7.2 1.5 6 4.8 4.8 6 1.5z"/></svg></span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-images">
+        <div class="about-img-primary img-placeholder fade-up">
+          <span>IMAGE PLACEHOLDER<br><small>Team at Work</small></span>
+        </div>
+        <div class="about-img-secondary img-placeholder fade-up" style="transition-delay:0.12s">
+          <span>IMAGE PLACEHOLDER<br><small>Exterior Job</small></span>
+        </div>
+        <div class="about-badge-float">
+          <span>Detail<br>Obsessed.</span>
+        </div>
+      </div>
+      <div class="about-text fade-up" style="transition-delay:0.08s">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Our Services,<br>Your Solution.</h2>
+        <p class="about-body">Lightning Mclean was built on one simple belief: every space deserves to shine. Based in Corner Brook, NL, we bring professional-grade cleaning to homes, businesses, and real estate properties — all at a fair price.</p>
+        <p class="about-body">We take pride in our work no matter the project. Whether it's sparkling windows, a spotless commercial space, or a move-out deep clean, we don't leave until the job is done right and you're completely satisfied.</p>
+        <div class="about-contact-row">
+          <a href="tel:+17092168019" class="about-contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (709) 216-8019
+          </a>
+          <a href="mailto:lightningmclean25@gmail.com" class="about-contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            lightningmclean25@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="checkerboard-top" aria-hidden="true"></div>
+    <div class="container">
+      <div class="services-heading-row">
+        <div>
+          <div class="section-label" style="color:var(--pink)">What We Do</div>
+          <h2 class="section-title" style="color:var(--cream)">Our Services</h2>
+        </div>
+        <a href="#" class="view-all-services-btn" onclick="openQuotePanel(event)">Get a Quote →</a>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up" onclick="openServiceModal('window')">
+          <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M12 4v16M4 12h16"/></svg></div>
+          <h3 class="service-name">Window Cleaning</h3>
+          <p class="service-desc">Crystal-clear results inside and out with streak-free cleaning.</p>
+          <span class="service-click-hint">View Details →</span>
+          <div class="service-img img-placeholder">
+            <span>IMAGE PLACEHOLDER<br><small>Window Cleaning</small></span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.08s" onclick="openServiceModal('residential')">
+          <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M6 10.5V20h12v-9.5"/><path d="M10 20v-6h4v6"/></svg></div>
+          <h3 class="service-name">Residential Cleaning</h3>
+          <p class="service-desc">Reliable home cleaning for a fresh and comfortable space.</p>
+          <span class="service-click-hint">View Details →</span>
+          <div class="service-img img-placeholder">
+            <span>IMAGE PLACEHOLDER<br><small>Residential Cleaning</small></span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.16s" onclick="openServiceModal('commercial')">
+          <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 21v-3h4v3"/></svg></div>
+          <h3 class="service-name">Commercial Cleaning</h3>
+          <p class="service-desc">Professional cleaning for offices and business spaces.</p>
+          <span class="service-click-hint">View Details →</span>
+          <div class="service-img img-placeholder">
+            <span>IMAGE PLACEHOLDER<br><small>Commercial Cleaning</small></span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.24s" onclick="openServiceModal('realestate')">
+          <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="4"/><path d="m11 12 8 8M16 17l2-2M18.5 19.5l2-2"/></svg></div>
+          <h3 class="service-name">Real Estate Cleaning</h3>
+          <p class="service-desc">Move-in and listing-ready cleaning for properties.</p>
+          <span class="service-click-hint">View Details →</span>
+          <div class="service-img img-placeholder">
+            <span>IMAGE PLACEHOLDER<br><small>Real Estate Cleaning</small></span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.32s" onclick="openServiceModal('debris')">
+          <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14M10 11v6M14 11v6"/></svg></div>
+          <h3 class="service-name">Debris Removal</h3>
+          <p class="service-desc">Fast cleanup for clutter and unwanted materials.</p>
+          <span class="service-click-hint">View Details →</span>
+          <div class="service-img img-placeholder">
+            <span>IMAGE PLACEHOLDER<br><small>Debris Removal</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkerboard-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- SERVICE MODAL -->
+  <div class="service-modal" id="serviceModal">
+    <div class="service-modal-box">
+      <button class="modal-close" onclick="closeServiceModal()">×</button>
+      <span class="modal-eyebrow">Service Details</span>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-tag" id="modalTag"></p>
+      <p id="modalDesc"></p>
+      <div class="modal-includes">
+        <h4>What's Included</h4>
+        <ul id="modalList"></ul>
+      </div>
+      <a href="#" class="btn-primary" onclick="closeServiceModal(); openQuotePanel(event);">Book Now</a>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="why-section" id="why">
+    <div class="container">
+      <div class="why-top fade-up">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title">The Lightning<br>Mclean Difference.</h2>
+        <p class="why-intro">At Lightning Mclean, we believe a clean space changes how people feel, work, and live. Whether it's a family home, a business, or a property preparing for new owners, we approach every project with real care, attention, and pride in our work.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-up">
+          <div class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3 class="why-title">Reliable &amp; On Time</h3>
+          <p class="why-desc">We show up on time, communicate clearly, and make sure the job is done properly from start to finish. No shortcuts.</p>
+        </div>
+        <div class="why-card fade-up" style="transition-delay:0.1s">
+          <div class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></div>
+          <h3 class="why-title">Attention to Detail</h3>
+          <p class="why-desc">We treat every home and business with care and professionalism. We clean thoroughly, stay organized, and leave your space feeling refreshed.</p>
+        </div>
+        <div class="why-card fade-up" style="transition-delay:0.2s">
+          <div class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="m8.5 12.5 2.2 2.2 4.8-5.4"/></svg></div>
+          <h3 class="why-title">Quality That Shows</h3>
+          <p class="why-desc">We focus on the details most people overlook because great cleaning should not only look good — it should feel complete.</p>
+        </div>
+        <div class="why-card fade-up" style="transition-delay:0.3s">
+          <div class="why-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 13c2.5 0 3.5-2 4-5l.4-2.3c.2-1 1.6-.9 1.8.1l.4 2.2h2.7c1.9 0 3.7 1.5 3.7 3.4V14c0 3.3-2.7 6-6 6H8c-2.2 0-4-1.8-4-4v-3h3z"/><path d="M7 13v7"/></svg></div>
+          <h3 class="why-title">Built With Pride</h3>
+          <p class="why-desc">Lightning Mclean was built with passion, hard work, and a genuine goal: helping homes and businesses look their absolute best.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY STRIP -->
+  <section class="gallery-strip" id="gallery">
+    <div class="checkerboard-top" aria-hidden="true"></div>
+    <div class="gallery-label-row">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Real Results.<br>Spotless Spaces.</h2>
+      <div class="gallery-filter-row">
+        <button class="gallery-filter-btn active">All</button>
+        <button class="gallery-filter-btn">Residential</button>
+        <button class="gallery-filter-btn">Commercial</button>
+        <button class="gallery-filter-btn">Windows</button>
+        <button class="gallery-filter-btn">Real Estate</button>
+        <a href="#" class="view-more-reviews-btn" style="margin-top:0; margin-left:auto;">View More Photos &#8594;</a>
+      </div>
+    </div>
+    <div class="gallery-track">
+      <div class="gallery-item img-placeholder"><span>IMAGE PLACEHOLDER<br><small>Work Photo 1</small></span></div>
+      <div class="gallery-item img-placeholder"><span>IMAGE PLACEHOLDER<br><small>Work Photo 2</small></span></div>
+      <div class="gallery-item img-placeholder"><span>IMAGE PLACEHOLDER<br><small>Work Photo 3</small></span></div>
+      <div class="gallery-item img-placeholder"><span>IMAGE PLACEHOLDER<br><small>Work Photo 4</small></span></div>
+      <div class="gallery-item img-placeholder"><span>IMAGE PLACEHOLDER<br><small>Work Photo 5</small></span></div>
+    </div>
+    <div class="checkerboard-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="testimonials-section" id="reviews">
+    <div class="container">
+      <div>
+        <div class="section-label">Reviews</div>
+        <h2 class="section-title">What Our<br>Clients Say.</h2>
+        <a href="#" class="view-more-reviews-btn">View More Reviews &#8594;</a>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial fade-up">
+          <div class="stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg></div>
+          <p class="testimonial-text">"Absolutely incredible work. My windows have never been this clear. The team was professional, on time, and left zero mess behind. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JB</div>
+            <div><strong>Jamie B.</strong><span>Corner Brook, NL</span></div>
+          </div>
+        </div>
+        <div class="testimonial fade-up" style="transition-delay:0.1s">
+          <div class="stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg></div>
+          <p class="testimonial-text">"Got a quote within hours of reaching out, and they fit me in the very next day. Fast, friendly, and thorough. My house looks brand new."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SR</div>
+            <div><strong>Sarah R.</strong><span>Corner Brook, NL</span></div>
+          </div>
+        </div>
+        <div class="testimonial fade-up" style="transition-delay:0.2s">
+          <div class="stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.8 12.4 7l5.6.6-4.2 3.8 1.2 5.5-5-2.9-5 2.9 1.2-5.5L2 7.6 7.6 7 10 1.8z"/></svg></div>
+          <p class="testimonial-text">"Used them for a real estate clean on a listing. The place looked spotless — better than the day it was built. Clients were blown away."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MK</div>
+            <div><strong>Mark K.</strong><span>Realtor, NL</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE CTA BANNER -->
+  <section class="quote-cta-section">
+    <div class="checkerboard-top" aria-hidden="true"></div>
+    <div class="quote-cta-inner">
+      <div>
+        <div class="section-label" style="color:var(--pink)">Get A Quote</div>
+        <h2 class="section-title">Let's Make Your<br>Space Spotless.</h2>
+        <p>Fast. Easy. No Obligation.</p>
+        <a href="#" class="btn-primary btn-large" onclick="openQuotePanel(event)">Start Your Quote &#8594;</a>
+      </div>
+      <div>
+        <div class="quote-cta-steps">
+          <div class="cta-step"><span class="cta-step-num">1</span><span>Select Services</span></div>
+          <div class="cta-arrow">&#8594;</div>
+          <div class="cta-step"><span class="cta-step-num">2</span><span>Choose Date &amp; Time</span></div>
+          <div class="cta-arrow">&#8594;</div>
+          <div class="cta-step"><span class="cta-step-num">3</span><span>Your Details</span></div>
+          <div class="cta-arrow">&#8594;</div>
+          <div class="cta-step"><span class="cta-step-num">4</span><span>Review &amp; Submit</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="checkerboard-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="footer footer-minimal" id="contact"><div class="footer-bottom"><span>© 2026 Lightning Mclean Cleaning Services · Corner Brook, NL</span></div></footer>
+
+  <!-- QUOTE PANEL OVERLAY -->
+  <div class="quote-panel-overlay" id="quotePanelOverlay" onclick="closeQuotePanel()"></div>
+
+  <!-- QUOTE PANEL -->
+  <aside class="quote-panel" id="quotePanel">
+    <button class="quote-close" onclick="closeQuotePanel()">×</button>
+    <span class="modal-eyebrow">Free Quote</span>
+    <h2>Request a Cleaning Quote</h2>
+    <p class="quote-sub">Tell us what you need and we'll get back to you within 24 hours.</p>
+    <form class="quote-form" id="quoteForm">
+      <label>Services Needed <span>*</span></label>
+      <div class="quote-checks">
+        <label><input type="checkbox" required> Window Cleaning</label>
+        <label><input type="checkbox"> Residential Cleaning</label>
+        <label><input type="checkbox"> Commercial Cleaning</label>
+        <label><input type="checkbox"> Real Estate Cleaning</label>
+        <label><input type="checkbox"> Debris Removal</label>
+      </div>
+      <label>Preferred Date <span>*</span></label>
+      <input type="date" required>
+      <label>Preferred Time <span>*</span></label>
+      <div class="time-slot-grid" id="timeSlotGrid">
+        <button type="button" class="time-slot" data-time="08:00">8:00 AM</button>
+        <button type="button" class="time-slot" data-time="09:00">9:00 AM</button>
+        <button type="button" class="time-slot" data-time="10:00">10:00 AM</button>
+        <button type="button" class="time-slot" data-time="11:00">11:00 AM</button>
+        <button type="button" class="time-slot" data-time="12:00">12:00 PM</button>
+        <button type="button" class="time-slot" data-time="13:00">1:00 PM</button>
+        <button type="button" class="time-slot" data-time="14:00">2:00 PM</button>
+        <button type="button" class="time-slot" data-time="15:00">3:00 PM</button>
+        <button type="button" class="time-slot" data-time="16:00">4:00 PM</button>
+      </div>
+      <input type="hidden" id="preferredTime" required>
+      <p class="availability-message" id="availabilityMessage">Select a date to check available times.</p>
+      <label>Full Name <span>*</span></label>
+      <input type="text" placeholder="Your full name" required>
+      <label>Phone Number <span>*</span></label>
+      <input type="tel" placeholder="Your phone number" required>
+      <label>Email Address <span>*</span></label>
+      <input type="email" placeholder="Your email address" required>
+      <label>Address / Location <span>*</span></label>
+      <input type="text" placeholder="Street, city, postal code" required>
+      <label>Additional Notes</label>
+      <textarea placeholder="Tell us more about your cleaning needs..."></textarea>
+      <button type="submit" class="btn-primary">Request Free Quote</button>
+    </form>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

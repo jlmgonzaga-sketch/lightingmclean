@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Lightning Mclean</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="desktop.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <main class="admin-dashboard">
+
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-top">
+        <div class="admin-brand">
+          <span class="logo-script">Lightning</span>
+          <span class="logo-block">Mclean</span>
+        </div>
+        <span class="admin-small-label">Admin Portal</span>
+      </div>
+
+      <nav class="admin-nav"></nav>
+
+      <button class="admin-logout-btn" onclick="logoutAdmin()">Logout</button>
+    </aside>
+
+    <section class="admin-main">
+
+      <div class="admin-topbar">
+        <div>
+          <span class="admin-label">Dashboard</span>
+        </div>
+      </div>
+
+      <div class="admin-booking-layout">
+
+        <div class="monthly-calendar-card">
+          <div class="monthly-calendar-head">
+            <button class="admin-outline-btn" onclick="changeCalendarMonth(-1)">Previous</button>
+            <h2 id="monthlyCalendarTitle">Month Year</h2>
+            <button class="admin-outline-btn" onclick="changeCalendarMonth(1)">Next</button>
+          </div>
+          <div class="monthly-calendar-weekdays">
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+          </div>
+          <div class="monthly-calendar-grid" id="monthlyCalendarGrid"></div>
+        </div>
+
+        <div class="admin-calendar-card">
+          <div class="admin-calendar-head">
+            <div>
+              <span class="admin-label">Booking Calendar</span>
+              <h2>Manage Availability</h2>
+            </div>
+            <input type="date" id="adminCalendarDate" class="admin-date-input">
+          </div>
+
+          <div class="admin-calendar-actions">
+            <button class="btn-primary" onclick="blockFullDay()">Block Full Day</button>
+            <button class="admin-outline-btn" onclick="unblockFullDay()">Unblock Full Day</button>
+          </div>
+
+          <div class="admin-time-grid" id="adminTimeGrid">
+            <button data-time="08:00" data-label="8:00 AM">8:00 AM</button>
+            <button data-time="09:00" data-label="9:00 AM">9:00 AM</button>
+            <button data-time="10:00" data-label="10:00 AM">10:00 AM</button>
+            <button data-time="11:00" data-label="11:00 AM">11:00 AM</button>
+            <button data-time="12:00" data-label="12:00 PM">12:00 PM</button>
+            <button data-time="13:00" data-label="1:00 PM">1:00 PM</button>
+            <button data-time="14:00" data-label="2:00 PM">2:00 PM</button>
+            <button data-time="15:00" data-label="3:00 PM">3:00 PM</button>
+            <button data-time="16:00" data-label="4:00 PM">4:00 PM</button>
+          </div>
+
+          <p class="admin-calendar-note" id="adminCalendarNote">
+            Select a date to manage available times.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="admin-filters">
+        <input type="text" id="quoteSearchInput" placeholder="Search name, email, phone...">
+        <select id="quoteStatusFilter">
+          <option value="all">All Status</option>
+          <option value="pending">Pending</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+        <input type="date" id="quoteDateFilter">
+        <button class="admin-outline-btn" onclick="clearQuoteFilters()">Clear</button>
+      </div>
+
+      <div class="quote-table-wrap">
+        <table class="quote-table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Services</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Status</th>
+              <th>Updated By</th>
+              <th>Updated At</th>
+            </tr>
+          </thead>
+          <tbody id="quoteTableBody"></tbody>
+        </table>
+      </div>
+
+    </section>
+
+  </main>
+
+  <div class="admin-modal-overlay" id="quoteDetailsOverlay" onclick="closeQuoteDetails()"></div>
+
+  <div class="admin-quote-modal" id="quoteDetailsModal">
+    <button class="quote-close" onclick="closeQuoteDetails()">×</button>
+    <span class="admin-label">Quote Details</span>
+    <h2 id="detailCustomerName"></h2>
+    <div class="detail-grid">
+      <div><strong>Email</strong><p id="detailEmail"></p></div>
+      <div><strong>Phone</strong><p id="detailPhone"></p></div>
+      <div><strong>Address</strong><p id="detailAddress"></p></div>
+      <div><strong>Schedule</strong><p id="detailSchedule"></p></div>
+      <div><strong>Services</strong><p id="detailServices"></p></div>
+      <div><strong>Status</strong><p id="detailStatus"></p></div>
+      <div><strong>Updated By</strong><p id="detailUpdatedBy"></p></div>
+      <div><strong>Updated At</strong><p id="detailUpdatedAt"></p></div>
+    </div>
+    <div class="detail-notes">
+      <strong>Additional Notes</strong>
+      <p id="detailNotes"></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
