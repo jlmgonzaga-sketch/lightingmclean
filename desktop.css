@@ -1309,84 +1309,39 @@ section { scroll-margin-top: var(--nav-h); }
    13. CONTACT / FOOTER SECTION
    ════════════════════════════════════════ */
 .footer {
-  min-height: 100vh;
-  max-height: 100vh;
   background: var(--cream);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
   position: relative;
+  border-top: 1px solid rgba(26,45,69,0.12);
+  padding: 18px 20px;
 }
 
 .footer-inner {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr 1fr 1.2fr;
-  gap: clamp(18px, 2.8vw, 46px);
-  align-items: start;
-  padding: calc(var(--nav-h) + var(--pad-y)) var(--pad-x) clamp(14px, 2.2vh, 28px);
-}
-
-.footer-logo {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.footer-tagline { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 7px; }
-
-.footer-location {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 6px;
-  color: var(--navy) !important;
-  font-size: 0.84rem;
-  font-weight: 700;
+  text-align: center;
+  padding: 0;
 }
 
-.footer-links-col {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-.footer-links-col strong {
-  color: var(--pink);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 3px;
-}
-.footer-links-col a,
-.footer-links-col span {
-  color: var(--navy) !important;
-  font-size: clamp(0.76rem, 0.84vw, 0.9rem);
-  font-weight: 600;
-  transition: color 0.2s;
-}
-.footer-links-col a:hover { color: var(--pink) !important; }
-
-.footer-badges-col { display: flex; flex-direction: column; gap: 9px; }
-
+/* Hide all old footer sections */
+.footer-logo,
+.footer-tagline,
+.footer-location,
+.footer-links-col,
+.footer-badges-col,
 .footer-badge-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--navy);
-  color: var(--cream);
-  border: 2px solid var(--navy);
-  border-radius: 13px;
-  padding: 10px 13px;
-  font-weight: 800;
-  font-size: clamp(0.66rem, 0.78vw, 0.86rem);
+  display: none !important;
 }
 
+/* Compact copyright only */
 .footer-bottom {
-  border-top: 2px solid rgba(26,45,69,0.14);
-  padding: 13px var(--pad-x);
+  border: none;
+  padding: 0;
+  margin: 0;
   text-align: center;
   color: var(--navy) !important;
-  font-size: 0.76rem;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 
